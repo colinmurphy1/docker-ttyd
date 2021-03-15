@@ -19,7 +19,19 @@ if [ -f /etc/.firstrun ]; then
     fi
 
     # Prevent this from running again
-    rm -f /etc/.firstrun
+    rm /etc/.firstrun
+fi
+
+# Optionally set a timezone
+if [ ! -z $TZ ]; then
+    echo "Setting timezone to $TZ"
+
+    # delete symlink if it exists
+    [ -f /etc/localtime ] && rm /etc/localtime
+
+    # set timezone
+    ln -s "/usr/share/zoneinfo/$TZ" /etc/localtime
+    echo $TZ > /etc/timezone 
 fi
 
 # Auto login the user, if allowed

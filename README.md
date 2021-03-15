@@ -30,3 +30,4 @@ Docker-ttyd uses the following environment variables:
 | PASSWORD  | The password your user account uses. **Change this!** | `Passw0rd` |
 | SUDO_OK   | If enabled, the user account will have access to `sudo`. | `false` |
 | AUTOLOGIN | Automatically logs in as your user, without a password. | `false` |
+| TZ        | Optionally set the timezone, defaults to UTC. | `Etc/UTC` |
