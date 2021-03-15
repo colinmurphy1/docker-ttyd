@@ -1,8 +1,8 @@
 FROM alpine:edge
-ENV USERNAME="user" \
-    PASSWORD="Passw0rd" \
-    SUDO_OK="false" \
-    AUTOLOGIN="false" 
+ENV TTYD_USERNAME="user" \
+    TTYD_PASSWORD="Passw0rd" \
+    TTYD_SUDO="false" \
+    TTYD_AUTOLOGIN="false" 
 
 COPY ./entrypoint.sh /
 COPY ./skel/ /etc/skel

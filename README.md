@@ -24,9 +24,9 @@ ttyd is now accessible at `http://localhost:7681`
 
 Docker-ttyd uses the following environment variables:
 
-| Variable  | Description | Default Value |
-|-----------|-------------|---------------|
-| USERNAME  | The username your shell will run as. | `user` |
-| PASSWORD  | The password your user account uses. **Change this!** | `Passw0rd` |
-| SUDO_OK   | If enabled, the user account will have access to `sudo`. | `false` |
-| AUTOLOGIN | Automatically logs in as your user, without a password. | `false` |
+| Variable       | Description | Default Value |
+|----------------|-------------|---------------|
+| TTYD_USERNAME  | The username your shell will run as. | `user` |
+| TTYD_PASSWORD  | The password your user account uses. **Change this!** | `Passw0rd` |
+| TTYD_SUDO      | If enabled, the user account will have access to `sudo`. | `false` |
+| TTYD_AUTOLOGIN | Automatically logs in as your user, without a password. | `false` |
