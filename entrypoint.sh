@@ -23,7 +23,8 @@ if [ -f /etc/.firstrun ]; then
 fi
 
 # Optionally set a timezone
-if [ ! -z $TZ ]; then
+CURRENT_TZ=$(cat /etc/timezone)
+if [ "$TZ" != "$CURRENT_TZ" ]; then
     echo "Setting timezone to $TZ"
 
     # delete symlink if it exists
